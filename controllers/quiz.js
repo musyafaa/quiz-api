@@ -1,21 +1,21 @@
-const db = require('../models/quiz');
+const db = require('../models');
 const Quiz = db.quizzes;
 
 
 // create new quiz
-exports.create = async(req,res) => {
-    try{
-        const data = await Quiz.create(req, body)
+exports.create = async (req, res) => {    
+    try {
+        const data = await Quiz.create(req.body)
         res.json({
-            message: "quiz successfully created",
+            message: "quiz created successfully.",
             data: data,
-        })
-    }catch (error){
+        })    
+    } catch (error) {
         res.status(500).json({
             message: error.message,
-            data: null
+            data: null,
         });
-    }
+    }     
 }
 
 // get all quiz
@@ -44,7 +44,7 @@ exports.update = async(req,res) => {
         })
         res.json({
             message: "quiz successfully change",
-            data: quizzes,
+            data: quiz,
         });
     }catch (error){
         res.status(500).json({

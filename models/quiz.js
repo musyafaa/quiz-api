@@ -1,30 +1,30 @@
-module.exports = () => { 
+module.exports = (sequelize, Sequelize) => {
     const Quiz = sequelize.define('quiz', {
-        quiz : {
+        quiz: {
             type: Sequelize.STRING,
         },
-        a : {
+        a: {
             type: Sequelize.STRING,
         },
-        b : {
+        b: {
             type: Sequelize.STRING,
         },
-        c : {
+        c: {
             type: Sequelize.STRING,
         },
-        d : {
+        d: {
             type: Sequelize.STRING,
         },
-        key : {
+        key: {
             type: Sequelize.STRING,
         },
-        categoryId : {
+        categoryId: {
             type: Sequelize.INTEGER,
         },
-        levelId : {
+        levelId: {
             type: Sequelize.INTEGER,
         },
-    });
 
-    return Quiz
+    });
+    return Quiz;
 }

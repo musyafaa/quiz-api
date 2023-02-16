@@ -18,7 +18,7 @@ const sequelize = new Sequelize(
 
 const db = {};
 db.Sequelize = Sequelize;
-db.Sequelize = sequelize;
+db.sequelize = sequelize;
 
 //untuk menjalankan model ada aplikasi
 db.quizzes = require('./quiz') (sequelize, Sequelize);
